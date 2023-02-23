@@ -4,12 +4,12 @@ export default class Player {
     this.surname = surname;
     this.lotteryNumbers = lotteryNumbers;
   }
-
   getPlayerDetails() {
-    return `{$this.name} ${this.surname} ${this.lotteryNumbers}`;
+    return `${this.name} ${this.surname} ${this.lotteryNumbers}`;
   }
-
-  //   getMaxNumber(){
-  //     return Math.max(...this.lotteryNumbers);
-  //   }
+  //samo primjer
+  getMaxnUmber() {
+    const maxNumber = Math.max(this.lotteryNumbers);
+    return maxNumber;
+  }
 }

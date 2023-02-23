@@ -1,25 +1,18 @@
 import Player from "./player.js";
-
 export default class Lottery {
   constructor(people) {
     this.people = people;
     this.players = [];
     this.winningCombination = [];
   }
-
-  // funkcija za broj 1 do 7
   getLotteryNumbers() {
     let lotteryNumbers = [];
     while (lotteryNumbers.length < 4) {
-      let number = Math.floor(Math.random() * 7) + 1;
-
-      // provjera da li je broj u array-u
-
+      let number = Math.floor(Math.random() * 7 + 1);
       if (lotteryNumbers.indexOf(number) === -1) {
         lotteryNumbers.push(number);
       }
     }
-
     lotteryNumbers.sort();
     return lotteryNumbers;
   }
@@ -30,17 +23,12 @@ export default class Lottery {
         person.surname,
         this.getLotteryNumbers()
       );
-
-      console.log(player);
-
       this.players.push(player);
     });
   }
-
   getWinningCombination() {
     this.winningCombination = this.getLotteryNumbers();
   }
-
   startDrawing() {
     this.generatePlayers();
     this.getWinningCombination();
