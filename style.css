@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+}
+.header_title {
+  text-align: center;
+  margin: 20px;
+  margin: auto;
+}
+
+.form__center {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.section__input {
+  padding: 25px;
+  border: solid;
+}
+
+.section__form {
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  border: 1px solid;
+}
